@@ -1,17 +1,24 @@
 # WaveRider
 
-WaveRider is a noir-inspired ML workbench where every requested module is interactive and includes an upgraded mini-tool workflow.
+WaveRider is a noir-inspired ML workbench where every module is interactive and now includes a **Mega Update Phase 2** toolset.
+
+## Mega Update Phase 2
+
+- Dual-action upgrades per module (primary simulation + secondary enhancement action).
+- Expanded metric dashboards for all modules.
+- Shared Ops Activity Log with localStorage persistence.
+- Export-style utilities (for example, WaveBoost plan JSON preview).
 
 ## Modules
 
-- **WavePeak** — Audio feature extraction simulator with class prediction and signal metrics.
-- **WaveVis** — Projection mode switcher (t-SNE/UMAP/PCA) with regenerated clustering stats.
-- **WaveTrainer** — Raspberry Pi training planner with thermal and memory estimation.
-- **WavePCB** — PCB routing assistant that generates board-specific layout guidance.
-- **WaveTorch** — Tensorboard snapshot simulator with live training telemetry.
-- **WaveChat** — Finetune recipe builder with readiness and safety scoring.
-- **WaveBoost** — Runtime-aware optimization plan generator and gain estimates.
-- **WaveGen** — Rapid architecture prototype generator from design goals.
+- **WavePeak** — Feature extraction simulator, night preset, class metrics, run counter.
+- **WaveVis** — Projection switcher, baseline lock, drift alert monitoring.
+- **WaveTrainer** — Pi plan estimator, checkpoint cadence, thermal safe mode.
+- **WavePCB** — Routing advisor, congestion/EMI signals, shielding upgrade.
+- **WaveTorch** — Telemetry snapshot loader, convergence signal, run comparison.
+- **WaveChat** — Finetune recipe builder, eval coverage, guardrail injection.
+- **WaveBoost** — Runtime optimizer, latency/memory/power gains, plan export stub.
+- **WaveGen** — Prototype generator, deploy target recommendation, stack auto-select.
 
 ## Run locally
 
