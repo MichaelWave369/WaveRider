@@ -1,0 +1,195 @@
+:root {
+  --panel: rgba(20, 20, 26, 0.85);
+  --text: #f5f5f5;
+  --text-muted: #b8b8c4;
+  --accent: #58a6ff;
+  --accent-soft: rgba(88, 166, 255, 0.2);
+  --stroke: rgba(255, 255, 255, 0.12);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 15%, rgba(88, 166, 255, 0.12), transparent 35%),
+    radial-gradient(circle at 90% 0%, rgba(180, 72, 255, 0.14), transparent 28%),
+    linear-gradient(170deg, #050507 0%, #0b0b12 60%, #08080d 100%);
+  position: relative;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.15;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+
+.hero,
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+}
+
+.subtitle {
+  margin-top: 0.8rem;
+  max-width: 760px;
+  color: var(--text-muted);
+}
+
+main {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.module-card,
+.workspace,
+.metric,
+.tool-block,
+.output {
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.module-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.module-card:hover,
+.module-card:focus-within {
+  transform: translateY(-3px);
+  border-color: rgba(88, 166, 255, 0.5);
+}
+
+.module-card.active {
+  background: linear-gradient(150deg, rgba(88, 166, 255, 0.18), rgba(20, 20, 26, 0.88));
+  border-color: rgba(88, 166, 255, 0.8);
+}
+
+.module-card h2,
+.workspace h3,
+.output h4 {
+  margin: 0;
+}
+
+.module-card p,
+.workspace p,
+label,
+small {
+  color: var(--text-muted);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+
+button {
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+  background: var(--accent-soft);
+}
+
+input,
+select,
+textarea {
+  padding: 0.5rem 0.65rem;
+}
+
+button:hover {
+  background: rgba(88, 166, 255, 0.32);
+}
+
+.workspace {
+  padding: 1rem 1.2rem;
+}
+
+.workspace-head {
+  margin-bottom: 1rem;
+}
+
+.workspace-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.metric,
+.tool-block,
+.output {
+  padding: 0.8rem;
+}
+
+.metric-value {
+  display: block;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+}
+
+.tool-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.tool-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.output {
+  margin-top: 0.9rem;
+}
+
+.placeholder {
+  margin: 0;
+  font-style: italic;
+}
