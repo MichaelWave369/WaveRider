@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaveRider | Noir ML Workbench</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="hero">
+      <p class="eyebrow">Noir AI Studio</p>
+      <h1>WaveRider</h1>
+      <p class="subtitle">
+        A cinematic toolkit for audio intelligence, visual analytics, edge training, and rapid model innovation.
+      </p>
+    </header>
+
+    <main>
+      <section class="module-grid" aria-label="WaveRider modules">
+        <article class="module-card" data-module="WavePeak">
+          <h2>WavePeak</h2>
+          <p>Feature Extraction Audio Classifier.</p>
+          <button type="button">Open Module</button>
+        </article>
+
+        <article class="module-card" data-module="WaveVis">
+          <h2>WaveVis</h2>
+          <p>Machine Learning Data Visualization Tool.</p>
+          <button type="button">Open Module</button>
+        </article>
+
+        <article class="module-card" data-module="WaveTrainer">
+          <h2>WaveTrainer</h2>
+          <p>Raspberry Pi Model Trainer.</p>
+          <button type="button">Open Module</button>
+        </article>
+
+        <article class="module-card" data-module="WavePCB">
+          <h2>WavePCB</h2>
+          <p>PCB Designer Visual Tool.</p>
+          <button type="button">Open Module</button>
+        </article>
+
+        <article class="module-card" data-module="WaveTorch">
+          <h2>WaveTorch</h2>
+          <p>Torch Tensorboard Visualizer.</p>
+          <button type="button">Open Module</button>
+        </article>
+
+        <article class="module-card" data-module="WaveChat">
+          <h2>WaveChat</h2>
+          <p>Finetune &amp; Train ChatBots.</p>
+          <button type="button">Open Module</button>
+        </article>
+
+        <article class="module-card" data-module="WaveBoost">
+          <h2>WaveBoost</h2>
+          <p>Lightweight ML Optimization Library.</p>
+          <button type="button">Open Module</button>
+        </article>
+
+        <article class="module-card" data-module="WaveGen">
+          <h2>WaveGen</h2>
+          <p>Rapid Model Prototyping Utility.</p>
+          <button type="button">Open Module</button>
+        </article>
+      </section>
+
+      <section class="workspace" aria-live="polite">
+        <div class="workspace-head">
+          <h3 id="workspace-title">Command Deck</h3>
+          <p id="workspace-subtitle">Select a module to launch its upgraded mini-workbench.</p>
+        </div>
+        <div id="workspace-content">
+          <p class="placeholder">Awaiting module selection...</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
