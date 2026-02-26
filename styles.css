@@ -1,5 +1,4 @@
 :root {
-  --bg: #070709;
   --panel: rgba(20, 20, 26, 0.85);
   --text: #f5f5f5;
   --text-muted: #b8b8c4;
@@ -34,9 +33,14 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
 }
 
+.hero,
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .hero {
-  max-width: 1000px;
-  margin: 0 auto 2rem;
+  margin-bottom: 2rem;
 }
 
 .eyebrow {
@@ -51,19 +55,15 @@ body {
 h1 {
   margin: 0;
   font-size: clamp(2.2rem, 4vw, 3.8rem);
-  line-height: 1.05;
 }
 
 .subtitle {
   margin-top: 0.8rem;
-  max-width: 700px;
+  max-width: 760px;
   color: var(--text-muted);
-  font-size: 1.03rem;
 }
 
 main {
-  max-width: 1000px;
-  margin: 0 auto;
   display: grid;
   gap: 1.4rem;
 }
@@ -75,7 +75,10 @@ main {
 }
 
 .module-card,
-.console {
+.workspace,
+.metric,
+.tool-block,
+.output {
   background: var(--panel);
   border: 1px solid var(--stroke);
   border-radius: 16px;
@@ -102,44 +105,91 @@ main {
   border-color: rgba(88, 166, 255, 0.8);
 }
 
-h2 {
+.module-card h2,
+.workspace h3,
+.output h4 {
   margin: 0;
-  font-size: 1.2rem;
 }
 
-.module-card p {
-  margin: 0;
+.module-card p,
+.workspace p,
+label,
+small {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  flex: 1;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
 }
 
 button {
-  border: 1px solid rgba(88, 166, 255, 0.45);
-  background: var(--accent-soft);
-  color: var(--text);
-  font: inherit;
   padding: 0.55rem 0.8rem;
-  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 180ms ease;
+  background: var(--accent-soft);
+}
+
+input,
+select,
+textarea {
+  padding: 0.5rem 0.65rem;
 }
 
 button:hover {
   background: rgba(88, 166, 255, 0.32);
 }
 
-.console {
+.workspace {
   padding: 1rem 1.2rem;
 }
 
-h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
-  color: #d5e9ff;
+.workspace-head {
+  margin-bottom: 1rem;
 }
 
-#console-output {
+.workspace-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.metric,
+.tool-block,
+.output {
+  padding: 0.8rem;
+}
+
+.metric-value {
+  display: block;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+}
+
+.tool-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.tool-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.output {
+  margin-top: 0.9rem;
+}
+
+.placeholder {
   margin: 0;
-  color: var(--text-muted);
+  font-style: italic;
 }
